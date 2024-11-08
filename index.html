@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JuegoNaveEspacial</title>
+    <link rel="icon" type="image/x-icon" href="cr7.png">
+    <style>
+        /*codigo css para el cuerpo de la pagina*/
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
+            overflow: hidden;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        /*codigo css para formatear colores de canvas*/
+        canvas {
+            background-color: #000;
+            border: 1px solid #fff;
+        }
+        /*codigo css para declarar posiciones de los controles
+        .controls {
+            position: absolute;
+            bottom: 350px;
+            display: flex;
+            justify-content: right;
+            width: 100%;
+        }
+        /*codigo css para declarar el tamaño y alineado de los botones 
+        .controls button {
+            padding: 10px;
+            margin: 5px;
+            font-size: 16px;
+        }*/
+        .info {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 18px;
+        }
+        /*Texto en neon*/
+        .neon-text {
+            font-size: 20px;
+            color: #39ff14;
+            text-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14, 0 0 20px #39ff14, 0 0 40px #39ff14, 0 0 80px #39ff14;
+            margin-bottom: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .alien1 {
+            width: 3px;
+            height: 10px;
+            margin-right: auto;
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="alien1">
+        <img src="alien.gif">
+    </div>
+   
+    <p class="neon-text">PULSA "ESPACIO" PARA DISPARAR Y USA LAS FLECHAS PARA MOVERTE</p>
+    <canvas id="gameCanvas" width="480" height="640"></canvas>
+    <!--
+    <div class="controls">
+        <button onclick="moveLeft()">Izquierda</button>
+        <button onclick="moveRight()">Derecha</button>
+        <button onclick="shoot()">Disparar</button>
+    </div>
+    -->
+    <div class="info">
+        <div id="score">PUNTUACIÓN: 0</div>
+        <div id="lives">VIDAS: 3</div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
